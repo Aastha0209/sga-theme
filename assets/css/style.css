@@ -6492,9 +6492,7 @@ footer {
 .cs_social_icon {
   font-size: 18px;
 }
-/* 
-   TRUST STRIP
- */
+
 
 /* TRUST STRIP */
 .trust-strip {
@@ -6863,5 +6861,121 @@ footer {
   .cta-upgraded h2 {
     font-size: 30px;
   }
+}
+/* ================================
+   Super Graphic Header (Refined)
+================================ */
+
+.sg-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  height: 76px;
+}
+
+.sg-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================================
+   Brand
+================================ */
+
+.sg-logo a {
+  font-size: 23px;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.sg-logo span {
+  color: #1e40af; /* darker blue = more product feel */
+}
+
+/* ================================
+   Navigation
+================================ */
+
+.sg-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.sg-nav a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* soft hover (NOT Canva underline copy) */
+.sg-nav a:hover {
+  color: #1e40af;
+  background: #eff6ff;
+}
+
+/* remove underline animation */
+.sg-nav a::after {
+  display: none;
+}
+
+/* ================================
+   Actions
+================================ */
+
+.sg-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.sg-login {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.sg-login:hover {
+  text-decoration: underline;
+}
+
+.sg-signup {
+  background: #1e40af;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.15s ease,
+              box-shadow 0.15s ease;
+}
+
+.sg-signup:hover {
+  background: #1e3a8a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(30, 64, 175, 0.25);
+}
+/* Super Graphic Footer Overrides */
+.cs_footer a:hover {
+  color: #1e40af;
+}
+
+.cs_social_links i {
+  color: #1e40af;
 }
 

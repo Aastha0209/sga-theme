@@ -51,7 +51,7 @@
           <div class="hero-card"><img src="assets/img/mock/poster.jpg"></div>
           <div class="hero-card"><img src="assets/img/mock/instagram.jpg"></div>
           <div class="hero-card"><img src="assets/img/mock/resume.jpg"></div>
-          <div class="hero-card"><img src="assets/img/mock/presentation.jpg"></div>5tb
+          <div class="hero-card"><img src="assets/img/mock/presentation.jpg"></div>
         </div>
       </div>
 
@@ -403,115 +403,15 @@
   </div>
 </section>
 
-
-<!-- Start Footer Section -->
-<footer class="cs_footer cs_style_1 cs_type_3">
-  <div class="cs_height_90 cs_height_lg_60"></div>
-
-  <div class="container">
-    <div class="cs_footer_main">
-      <div class="row cs_gap_y_40">
-
-        <!-- BRAND / ABOUT -->
-        <div class="col-xl-5 col-lg-4 col-md-7">
-          <div class="cs_footer_widget cs_text_widget">
-            <div class="cs_brand cs_mb_10 wow fadeInUp">
-              <img src="assets/img/logo.svg" alt="Super Graphic Logo">
-            </div>
-            <p class="mb-0">
-              Super Graphic is an all-in-one online design platform that helps creators,
-              students, and teams design professional graphics, presentations,
-              resumes, and social media content — directly in the browser.
-            </p>
-          </div>
-        </div>
-
-        <!-- PRODUCT LINKS -->
-        <div class="col-xl-2 col-lg-2 col-md-4 offset-lg-0 offset-md-1">
-          <div class="cs_footer_widget cs_links_widget">
-            <h3 class="cs_footer_widget_title cs_fs_21 cs_normal cs_mb_21">
-              Product
-            </h3>
-            <ul class="cs_footer_medu cs_mp_0">
-              <li><a href="editor.html">Design Editor</a></li>
-              <li><a href="templates.html">Templates</a></li>
-              <li><a href="features.html">Features</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- RESOURCES -->
-        <div class="col-xl-2 col-lg-3 col-md-7">
-          <div class="cs_footer_widget cs_help_widget">
-            <h3 class="cs_footer_widget_title cs_fs_21 cs_normal cs_mb_21">
-              Resources
-            </h3>
-            <ul class="cs_footer_medu cs_mp_0">
-              <li><a href="help.html">Help Center</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="tutorials.html">Tutorials</a></li>
-              <li><a href="term-condition.html">Terms & Conditions</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- CONTACT -->
-        <div class="col-xl-3 col-lg-3 col-md-4 offset-md-1 offset-lg-0">
-          <div class="cs_footer_widget cs_contact_widget">
-            <h3 class="cs_footer_widget_title cs_fs_21 cs_normal cs_mb_21">
-              Contact
-            </h3>
-            <ul class="cs_footer_medu cs_mp_0">
-              <li>24/7 Creator Support</li>
-              <li>
-                <a href="mailto:support@supergraphic.app">
-                  support@supergraphic.app
-                </a>
-              </li>
-              <li>
-                <a href="tel:+911234567890">+91 12345 67890</a>
-              </li>
-              <li>Available Worldwide</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="cs_height_62 cs_height_lg_60"></div>
-
-    <!-- FOOTER BOTTOM -->
-    <div class="cs_footer_bottom">
-      <div class="cs_social_links cs_style_1 cs_heading_color">
-        <a href="#" aria-label="Instagram">
-          <span class="cs_social_icon cs_purple_color">
-            <i class="fa-brands fa-square-instagram"></i>
-          </span>
-          <span>Instagram</span>
-        </a>
-        <a href="#" aria-label="YouTube">
-          <span class="cs_social_icon cs_purple_color">
-            <i class="fa-brands fa-youtube"></i>
-          </span>
-          <span>YouTube</span>
-        </a>
-        <a href="#" aria-label="Twitter">
-          <span class="cs_social_icon cs_purple_color">
-            <i class="fa-brands fa-x-twitter"></i>
-          </span>
-          <span>Twitter</span>
-        </a>
-      </div>
-
-      <div class="cs_footer_text cs_heading_color">
-        © <span class="cs_getting_year"></span> Super Graphic App by MT. All rights reserved.
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- End Footer Section -->
+    <!-- Footer Component -->
+<div id="footer"></div>
+<script>
+  fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
 
 
 <!-- Scripts -->

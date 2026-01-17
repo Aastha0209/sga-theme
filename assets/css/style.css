@@ -1555,6 +1555,9 @@ textarea {
   .cs_height_lg_100 {
     height: 100px;
   }
+  .cs_height_60 { height: 60px; }
+.cs_height_lg_40 { height: 40px; }
+
 }
 /*--------------------------------------------------------------
   06. General
@@ -6111,3 +6114,625 @@ Pricing controller
 .cs_comment_form label {
   color: var(--body-color);
 }/*# sourceMappingURL=style.css.map */
+.cs_canva_hero {
+  padding: 120px 0;
+}
+
+.cs_design_collage {
+  position: relative;
+  height: 520px;
+}
+
+.design_card {
+  position: absolute;
+  width: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.card_1 { top: 40px; left: 40px; }
+.card_2 { top: 0; right: 0; animation-delay: 1s; }
+.card_3 { bottom: 0; left: 80px; animation-delay: 2s; }
+.card_4 { bottom: 40px; right: 40px; animation-delay: 3s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+/* ===============================
+   GLOBAL TYPOGRAPHY POLISH
+================================= */
+.cs_fs_68 {
+  font-size: 64px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.cs_fs_50 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.cs_fs_21 {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 520px;
+}
+
+.cs_btn_group {
+  margin-top: 35px;
+  display: flex;
+  gap: 18px;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+.cs_hero_text h1 {
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.cs_hero_text h1 span {
+  background: linear-gradient(90deg, #8b6cff, #6c5ce7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cs_hero_text p {
+  font-size: 19px;
+  color: #555;
+  max-width: 520px;
+  margin-top: 20px;
+}
+
+
+
+/* ===============================
+   HERO SEPARATE CARDS
+================================= */
+
+.hero-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 540px;
+  position: relative;
+}
+
+/* SINGLE CARD */
+.hero-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 60px 120px rgba(0, 0, 0, 0.12);
+  transform-style: preserve-3d;
+  animation: floatCard 7s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hero-card {
+  height: 260px; /* controls card size */
+}
+
+
+.hero-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.18),
+    0 80px 140px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.hero-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-card:nth-child(2) {
+  animation-delay: 1.5s;
+  transform: translateY(12px);
+}
+.hero-card:nth-child(3) {
+  animation-delay: 3s;
+  transform: translateY(-8px);
+}
+.hero-card:nth-child(4) {
+  animation-delay: 4.5s;
+  transform: translateY(10px);
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ===============================
+   TRUSTED TEXT (BRANDS SECTION)
+================================= */
+
+.trusted-text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #777;
+  position: relative;
+  display: inline-block;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+.trusted-text::before,
+.trusted-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.trusted-text::before {
+  left: -60px;
+}
+
+.trusted-text::after {
+  right: -60px;
+}
+/* ===============================
+   DESIGN EDITOR SECTION IMAGE
+================================= */
+
+.cs_feature_image {
+  width: 100%;
+  max-width: 520px;   /* controls how big it gets */
+}
+
+.cs_feature_image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.18);
+}
+/* ===============================
+   FOOTER BASE
+================================= */
+
+.cs_footer {
+  background: #fafafa;
+  border-top: 1px solid #eaeaea;
+}
+
+.cs_footer_main {
+  padding-bottom: 60px;
+}
+.cs_footer .cs_brand img {
+  height: 34px;
+}
+
+.cs_footer .cs_text_widget p {
+  color: #666;
+  line-height: 1.7;
+  max-width: 420px;
+}
+.cs_footer_widget_title {
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+.cs_footer_bottom {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cs_social_links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.cs_social_links a:hover {
+  color: #6c5ce7;
+}
+
+.cs_social_icon {
+  font-size: 18px;
+}
+/* ===============================
+   TRUST STRIP
+================================= */
+
+/* ================= TRUST STRIP ================= */
+.trust-strip {
+  background: linear-gradient(180deg, #0f1020 0%, #14152b 100%);
+  padding: 20px 0;        /* 🔥 tight spacing */
+  margin: 0;
+}
+
+.trusted-text {
+  color: #cfd2ff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  opacity: 0.9;
+}
+
+/* decorative lines */
+.trusted-text::before,
+.trusted-text::after {
+  content: "";
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c6cff,
+    transparent
+  );
+}
+
+.cs_canva_hero {
+  padding-bottom: 40px; /* 🔥 previously too tall */
+}
+.hero-cards {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.hero-card {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15); /* softer */
+}
+/* ===== CLEAN CONTENT SECTIONS ===== */
+.soft-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.soft-section-alt {
+  padding: 90px 0;
+  background: #f8f9ff;
+}
+
+.soft-section h2,
+.soft-section-alt h2 {
+  margin-bottom: 12px;
+}
+
+.soft-section p,
+.soft-section-alt p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #555;
+}
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background: #8b6cff; 
+  padding: 120px 0;
+}
+
+.final-cta h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.cs_dark_bg {
+  background: #000;
+}
+.final-cta {
+  background: linear-gradient(135deg, #8b6cff, #6f5cff);
+}
+/* ================= SOFT SECTIONS ================= */
+.soft-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.soft-section-alt {
+  padding: 90px 0;
+  background: #f7f8fc;
+}
+
+.cs_section_text {
+  max-width: 720px;
+  margin: 14px auto 0;
+  color: #666;
+}
+
+/* ================= FEATURE CARDS ================= */
+.feature-grid {
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  font-size: 36px;
+  color: #8b5cf6;
+  margin-bottom: 20px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.testimonial-name {
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+/* ================= PRICING ================= */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 32px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.pricing-card.featured {
+  border: 2px solid #8b5cf6;
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 44px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+/* ================= FAQ ================= */
+
+.faq-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.faq-question {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* PRICING CARDS */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.pricing-card h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pricing-card .price {
+  font-size: 42px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.pricing-sub {
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.pricing-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.pricing-details li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #444;
+}
+.feature-image-wrapper img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.feature-image-wrapper img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
+}
+.feature-dot {
+  width: 10px;
+  height: 10px;
+  background: #7b61ff;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.cs_section_heading hr {
+  width: 60px;
+  height: 3px;
+  background: #7b61ff;
+  border: none;
+  margin-top: 14px;
+}
+.feature-image-wrapper img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+/* Design Editor Section spacing */
+.design-editor-section {
+  padding: 80px 0 150px; /* bottom padding prevents touching purple block */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image polish */
+.feature-image-wrapper img {
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* Button safety */
+.cs_btn {
+  display: inline-block;
+  min-width: 220px;
+  text-align: center;
+}
+/* ================= CTA SECTION ================= */
+
+.cta-upgraded {
+  position: relative;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #8f6bff 0%, #6a4cff 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Soft light overlay */
+.cta-upgraded::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 255, 255, 0.18),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Decorative floating circle */
+.cta-upgraded::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -140px;
+  left: -140px;
+  pointer-events: none;
+}
+
+/* Heading */
+.cta-upgraded h2 {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+
+/* Highlight line */
+.cta-highlight {
+  opacity: 0.92;
+}
+
+/* CTA Button */
+.cta-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 44px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover */
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .cta-upgraded {
+    padding: 90px 20px;
+  }
+
+  .cta-upgraded h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-upgraded h2 {
+    font-size: 30px;
+  }
+}
